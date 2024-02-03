@@ -1,15 +1,16 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from '@remix-run/node';
+import { Button } from 'shared-ui';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: 'New Remix App' },
+    { name: 'description', content: 'Welcome to Remix!' },
   ];
 };
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
@@ -36,6 +37,11 @@ export default function Index() {
           </a>
         </li>
       </ul>
+
+      <div>
+        <h1>from shared-ui lib on the pnpm monorepo</h1>
+        <Button onClick={() => console.log('clicked')}>Click me</Button>
+      </div>
     </div>
   );
 }
